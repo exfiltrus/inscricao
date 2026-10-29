@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exfiltrus CTF</title>
+  <meta name="description" content="Exfiltrus CTF: 30 desafios de segurança da informação. Inscreva-se.">
+  <link rel="icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="rain" aria-hidden="true"></canvas>
+
+  <main class="wrap">
+    <header class="hero">
+      <img id="logo" class="logo" src="logo.png" alt="Logo do Exfiltrus CTF">
+      <!-- <h1 class="title" data-text="EXFILTRUS">EXFILTRUS</h1> -->
+      <p class="subtitle">capture the flag - COSEG</p>
+    </header>
+
+    <section class="panel" aria-labelledby="timer-title">
+      <h2 id="timer-title" class="panel-title">tempo restante</h2>
+      <div id="timer" class="timer" role="timer" aria-live="off">
+        <div class="unit"><span id="t-d">--</span><small>dias</small></div>
+        <span class="sep">:</span>
+        <div class="unit"><span id="t-h">--</span><small>horas</small></div>
+        <span class="sep">:</span>
+        <div class="unit"><span id="t-m">--</span><small>min</small></div>
+        <span class="sep">:</span>
+        <div class="unit"><span id="t-s">--</span><small>seg</small></div>
+      </div>
+      <p class="hint">encerra em 06/11/2026 às 00:00 (horário de Brasília)</p>
+    </section>
+
+    <section class="panel" aria-labelledby="reg-title">
+      <h2 id="reg-title" class="panel-title">inscrição</h2>
+      <p id="spots" class="spots">verificando vagas...</p>
+
+      <form id="form" novalidate autocomplete="off">
+        <label for="nome">nome completo</label>
+        <input id="nome" name="nome" type="text" maxlength="100" required autocomplete="name">
+
+        <label for="nick">nickname</label>
+        <input id="nick" name="nick" type="text" maxlength="20" required autocomplete="off" placeholder="letras, números, _ - .">
+
+        <label for="email">email</label>
+        <input id="email" name="email" type="email" maxlength="120" required autocomplete="email">
+
+        <label for="senha">senha</label>
+        <input id="senha" name="senha" type="password" minlength="8" maxlength="72" required autocomplete="new-password" placeholder="mínimo 8 caracteres">
+
+        <p id="msg" class="msg" role="alert"></p>
+        <button id="submit" type="submit">entrar no exfiltrus</button>
+      </form>
+
+      <div id="done" class="done" hidden>
+        <p class="done-title">cadastro realizado</p>
+        <p>bem-vindo, <strong id="done-nick"></strong>. guarde seu nickname e seu email: você vai usá-los na plataforma do CTF.</p>
+      </div>
+
+      <div id="closed" class="closed" hidden>
+        <p id="closed-text" class="done-title">inscrições encerradas</p>
+      </div>
+    </section>
+
+    <footer class="foot">exfiltrus ctf</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
