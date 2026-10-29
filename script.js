@@ -2,7 +2,7 @@
 const CONFIG = {
   // Cole aqui a URL do Web App do Google Apps Script (termina em /exec).
   // Se ficar vazio, o site roda em modo de teste (salva só no navegador).
-  ENDPOINT: "",
+  ENDPOINT: "https://script.google.com/macros/s/AKfycbzwriF5l28_SI8mJGxa-w6e4i5F3NWukbykWU2nxzB6IeYuV8DK3vjKVh8Mjelg-mPU/exec",
 
   // Fim do evento: 6 de novembro de 2026, 00:00, horário de Brasília.
   DEADLINE: "2026-11-06T00:00:00-03:00",
