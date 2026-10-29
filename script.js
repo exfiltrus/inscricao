@@ -12,7 +12,8 @@ const CONFIG = {
 
   // true = a senha vai para a planilha como hash SHA-256 (recomendado).
   // false = a senha vai em texto puro (não recomendado).
-  HASH_PASSWORD: true,
+  //
+  HASH_PASSWORD: false,
 };
 /* ======================================================== */
 
